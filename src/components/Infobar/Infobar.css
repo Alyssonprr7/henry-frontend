@@ -2,27 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2979FF;
-  border-radius: 4px 4px 0 0;
-  height: 60px;
+  background: #FE5000;
+  height: 8vh;
   width: 100%;
+  position: absolute;
+  z-index: 2
 }
 
 .leftInnerContainer {
-  flex: 0.5;
-  display: flex;
-  align-items: center;
   margin-left: 5%;
-  color: white;
 }
 
 .rightInnerContainer {
   display: flex;
   flex: 0.5;
   justify-content: flex-end;
-  margin-right: 5%;
-}
-
-.onlineIcon {
   margin-right: 5%;
 }

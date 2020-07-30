@@ -39,7 +39,7 @@ const Message = ({message: {user, label, text}, name}) => {
 			)
 
 		: (
-			<div className="justifyStart">
+			<div className="justifyStart typing">
 				 <Loader
 				     type="ThreeDots"
 				     color="#072647"

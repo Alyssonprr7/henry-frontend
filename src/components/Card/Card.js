@@ -4,21 +4,22 @@ import "./Card.css"
 
 
 
-const Card = () => {
+const Card = ({data:{brand, model, year, version, img, price, link}}) => {
 	return(
 		<div className="card-container">
 			<div className="card-content">
-				<img src={Image} width={"40%"} height={"80%"}/>
+				<img src={img} width={"40%"} height={"80%"}/>
 				<div className="attributes">
 					<div className = "brandModelVersion">
-						<p className="brandModel"> VOLKSWAGEN CROSSFOX</p>
-						<p className="version">1.6 MSI PEPPER 16V</p>
+						<p className="brandModel"> {brand} {model}</p>
+						<p className="version">{version} | {year}</p>
 					</div>
-					<p className="price">R$ 39.000</p>
+					<div className="valueMore">
+						<p className="price"> R${(price).toLocaleString('pt-BR')}</p>
+						<button onClick={(event) => {window.open(link, "_blank")}}> SAIBA MAIS</button>
+					</div>
 				</div>
 			</div>
-			
-			
 		</div>
 	)
 }

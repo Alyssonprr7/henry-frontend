@@ -1,6 +1,13 @@
 .form {
   display: flex;
   border-top: 2px solid #D3D3D3;
+  height: 12vh;
+  position: fixed;
+  width: 100%;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
 }
 
 .input {
@@ -8,8 +15,6 @@
   padding-left: 5%;
   width: 80%;
   font-size: 1.2em;
-  font-family: 'Saira', sans-serif;
-
 }
 
 input:focus, textarea:focus, select:focus, button:focus{
@@ -29,4 +34,26 @@ button:active {
 button img {
   display: flex;
   align-self: "center"
+}
+
+.rater{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+  width: 100%
+
+}
+
+.rater p{
+  text-align: center;
+  font-size: 1.0em;
+  margin: 0 0 -2% 0;
+}
+
+.rater button {
+  width: 20%;
+  height: 3vh;
+  margin: 0 0 -2% 0 ;
 }

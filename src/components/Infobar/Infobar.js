@@ -1,19 +1,17 @@
 import React from 'react'
-import onlineIcon from '../../icons/onlineIcon.png'
-import closeIcon from '../../icons/closeIcon.png'
+import menuIcon from '../../icons/menu.png'
+import commentIcon from '../../icons/comment.png'
+import volantyIcon from '../../icons/volanty-logo.png'
 
 import "./Infobar.css"
 
 
 const Infobar = () => (
 	<div className="infoBar">
-		<div className="leftInnerContainer">
-			<img className="onlineIcon" src={onlineIcon} alt="online" />
-			<h3>room</h3>
-		</div>
-		<div className="rightInnerContainer">
-			<img src={closeIcon}alt="close"/>
-		</div>	 
+		<img className="onlineIcon" src={menuIcon} width={35} height={35} alt="menu" />
+		<img className="logo" src={volantyIcon} width={120} height={35}  />
+		<img src={commentIcon} alt="close" width={35} height={35}/>
+
 	</div>
 )
 
