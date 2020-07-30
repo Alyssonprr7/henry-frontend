@@ -1,0 +1,58 @@
+.card-container{
+	background-color: #FFFFFF;
+	margin-top: 6%;
+	border-radius: 15px;
+	width: 90%;
+	height: 150px;
+	display: flex;
+	align-self: center;
+	border-width: 2px;
+	border-color: #e8e6e6;
+	border-style: solid;
+}
+
+.card-content{
+	display: flex
+}
+
+
+p{
+	font-family: 'Roboto', sans-serif;
+}
+
+img{
+	border-radius: 15px;
+	padding:4% 3% 3% 3% ;
+}
+
+.attribites{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.brandModel{
+  font-size: 1.0em;
+  color:#1c2456;
+  font-weight: 600;
+  margin: 10% 0 0 0 ;
+  word-wrap: break-word;
+  max-width: 80%
+
+
+}
+
+.version{
+  font-size: 0.8em;
+  color:#b0b0b0;
+  font-weight: 500;
+  margin: 0 0 5px 0
+}
+
+
+.price{
+	margin: 15% 0 0 0;
+	font-size: 1.3em;
+	font-weight: 600;
+
+}

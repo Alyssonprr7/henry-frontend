@@ -5,23 +5,28 @@
 
 .input {
   border: none;
-  border-radius: 0;
-  padding: 5%;
+  padding-left: 5%;
   width: 80%;
   font-size: 1.2em;
+  font-family: 'Saira', sans-serif;
+
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus, button:focus{
   outline: none;
 }
 
+button:active {
+  opacity: 0.5
+}
+
 .sendButton {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #2979FF;
-  padding: 20px;
-  display: inline-block;
+  background: #FFF;
   border: none;
   width: 20%;
+}
+
+button img {
+  display: flex;
+  align-self: "center"
 }
