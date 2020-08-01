@@ -9,8 +9,8 @@ import "./Infobar.css"
 const Infobar = () => (
 	<div className="infoBar">
 		<img className="onlineIcon" src={menuIcon} width={35} height={35} alt="menu" />
-		<img className="logo" src={volantyIcon} width={120} height={35}  />
-		<img src={commentIcon} alt="close" width={35} height={35}/>
+		<img className="logo" src={volantyIcon} width={120} height={35} alt="volanty-logo"  />
+		<img src={commentIcon} alt="contact" width={35} height={35}/>
 
 	</div>
 )

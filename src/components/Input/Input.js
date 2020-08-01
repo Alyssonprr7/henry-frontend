@@ -1,30 +1,35 @@
 
-import React, {useState} from 'react'
+import React from 'react'
 
 import "./Input.css"
 import sendButton from "../../icons/send_icon.png"
-import Rating from 'react-rating'
 import ReactStars from "react-rating-stars-component";
+import VLogo from "../../icons/v-logo.png"
 
 
 
 
 
-const Input = ({message, setMessage,sendMessage, finishQuestions}) => {
-	const [rater, setRater] = useState(0)
+const Input = ({message, setMessage,sendMessage, finishQuestions, setRater, apiRater, submitRate}) => {
 
-	function ApiRater(value){
-		console.log(value)
-	}
+	
 
 	return (
 		<div>
 		{finishQuestions 
-			? <div className="rater">
-				<p>Avalie se as escolhas foram certas</p>
-				<ReactStars size={35} onChange={newValue=>{setRater(newValue)}} />
-				<button onClick={event=>{ApiRater(rater)}}>Enviar</button>
-			</div> 
+			? submitRate ? 
+				<div className="rateSubmited">
+					<img src={VLogo} alt="just V from volanty logo"/>
+					<p> Avaliação enviada com sucesso! </p>
+				</div>
+
+			:( 
+				<div className="rater">
+					<p>Avalie se as escolhas foram certas</p>
+					<ReactStars size={35} onChange={newValue=>{setRater(newValue)}} />
+					<button onClick={event=>{apiRater()}}>Enviar</button>
+				</div>
+			) 
 			: <form className="form">
 				<input 
 				className="input"

@@ -57,3 +57,24 @@ button img {
   height: 3vh;
   margin: 0 0 -2% 0 ;
 }
+
+.rateSubmited{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rateSubmited img{
+  width: 42px;
+  height: 40px;
+  padding:0;
+  margin-bottom: 1%
+
+}
+
+
+.rateSubmited p{
+  text-align: center;
+  margin: 0;
+}

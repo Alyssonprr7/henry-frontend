@@ -1,20 +1,14 @@
-import React, {useState} from 'react'
-import ReactEmoji from 'react-emoji'
+import React from 'react'
 import Loader from 'react-loader-spinner'
-import Card from '../../Card/Card'
 
 
 
 import "./Message.css"
 
-//<p className="sentText">Henry está digitando...</p>
+
 
 const Message = ({message: {user, label, text}, name}) => {
-	const [isSentByCurrentUser, setIsSentByCurrentUser] = useState(false)
 
-	setTimeout(()=>{
-		setIsSentByCurrentUser(!isSentByCurrentUser)
-	},[10000])
 	
 	return(
 		label === "clientMessage"
