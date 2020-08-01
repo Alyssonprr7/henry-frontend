@@ -40,10 +40,10 @@ const Chat = () => {
 	 	"priceQuestion": `${name}, qual é a média de preço que você está procurando em um carro? Digite apenas o número, por favor...`,
 	 	"anotherPriceQuestion": "Sem problemas, vamos de novo. Qual é o valor aproximado que deseja gastar?",
  		"confirmPriceQuestion":`Temos ${avaibleCars} carros nessa faixa de preço, deseja prosseguir?`,
-	 	"childQuestion":`Vamos lá, agora eu peço pra que responda as perguntas seguintes somente com sim ou não.\n Você tem filhos, ${name}?`,
+	 	"childQuestion":`Por favor, responda as perguntas seguintes somente com sim ou não.\n Você tem filhos, ${name}?`,
  		"marryQuestion":"Você é casado?",
  		"useQuestion":`${name}, você usará o carro diariamente?`,
- 		"tripQuestion": "Vai usar o carro pra viajar frequentemente?"
+ 		"tripQuestion": "Usará o carro frequentemente para viajar?"
 	 }
 
 
@@ -77,7 +77,7 @@ const Chat = () => {
 	}
 
 	useEffect(()=>{
-		sendBotMessage("Olá, seja bem vindo! Eu me chamo Henry e vou te ajudar a escolher o melhor carro!","welcomeMessage")	
+		sendBotMessage("Olá, seja bem-vindo(a)! Eu me chamo Henry e vou te ajudar a escolher o carro ideal!","welcomeMessage")	
 	},[])
 
 	useEffect(()=>{
@@ -129,7 +129,7 @@ const Chat = () => {
 						setPrice(lastMessage.text)
 						sendBotMessage(interactionQuestions[6], "meetingMessage", message)
 					}else{
-						sendBotMessage("Entre com apenas números, por favor!", "warningPriceMessage", message)
+						sendBotMessage("Entre apenas com números, por favor!", "warningPriceMessage", message)
 					}
 
 				}else if (secondFromLastMessage.label === "confirmPriceQuestion" || secondFromLastMessage.label ==="warningConfirmPriceMessage"){
@@ -151,28 +151,28 @@ const Chat = () => {
 						setAnswers([...answers, convertPortugueseToBoolean(lastMessage.text)])
 						sendBotMessage(interactionQuestions[2], "meetingMessage", message)
 					}else{
-						sendBotMessage("Hey, apenas sim ou não! Foi o nosso trato, lembra?!", "warningChildMessage", message)
+						sendBotMessage("Ops, eu só entendo sim ou não...", "warningChildMessage", message)
 					}
 				}else if (secondFromLastMessage.label === "marryQuestion" || secondFromLastMessage.label ==="warningMarryMessage"){
 					if(validateYesOrNo(lastMessage.text)){
 						setAnswers([...answers, convertPortugueseToBoolean(lastMessage.text)])
 						sendBotMessage(interactionQuestions[3], "meetingMessage", message)
 					}else{
-						sendBotMessage("Hey, apenas sim ou não! Foi o nosso trato, lembra?!", "warningMarryMessage", message)
+						sendBotMessage("Ops, eu só entendo sim ou não...", "warningMarryMessage", message)
 					}
 				} else if (secondFromLastMessage.label === "useQuestion" || secondFromLastMessage.label ==="warningUseMessage"){
 					if(validateYesOrNo(lastMessage.text)){
 						setAnswers([...answers, convertPortugueseToBoolean(lastMessage.text)])
 						sendBotMessage(interactionQuestions[4], "meetingMessage", message)
 					}else{
-						sendBotMessage("Hey, apenas sim ou não! Foi o nosso trato, lembra?!", "warningUseMessage", message)
+						sendBotMessage("Ops, eu só entendo sim ou não...", "warningUseMessage", message)
 					}
 				} else if (secondFromLastMessage.label === "tripQuestion" || secondFromLastMessage.label ==="warningTripMessage"){
 					if(validateYesOrNo(lastMessage.text)){
 						setAnswers([...answers, convertPortugueseToBoolean(lastMessage.text)])
 						sendBotMessage(interactionQuestions[5], "beforePreResultsMessage", message)
 					}else{
-						sendBotMessage("Hey, apenas sim ou não! Foi o nosso trato, lembra?!", "warningTripMessage", message)
+						sendBotMessage("Ops, eu só entendo sim ou não...", "warningTripMessage", message)
 					}
 				}
 
